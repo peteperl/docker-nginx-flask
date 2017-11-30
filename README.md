@@ -19,7 +19,7 @@ and push to our repo. This assumes you have setup the 'aws' and 'ecs-cli' clis a
   
 cd into the directory of each component. Use a reasonable versioning. I used 'a' as an example.    
   
-Build Nginx: (I used nginx-alpine)  
+Build Nginx: (I used nginx:alpine)  
 
      sudo docker build --no-cache -t nginx:a .
      sudo docker tag nginx:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
@@ -31,7 +31,9 @@ Build Flask-gunicorn:
      sudo docker tag gunicorn-flask:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:gunicorn-flask-a
      sudo docker push 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:gunicorn-flask-a
 
-## To Run
+## Todo
+
+I appreciate any comments.  
 
 Make sure 'gcloud compute' is installed and authenticated  
  https://cloud.google.com/compute/docs/gcloud-compute/
