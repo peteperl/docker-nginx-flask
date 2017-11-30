@@ -19,7 +19,7 @@ and push to our repo. This assumes you have setup the 'aws' and 'ecs-cli' clis a
   
 cd into the directory of each component. Use a reasonable versioning. I used 'a' as an example.    
   
-Build Nginx:  
+Build Nginx: (I used nginx-alpine)  
 
      sudo docker build --no-cache -t nginx:a .
      sudo docker tag nginx:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
@@ -39,12 +39,3 @@ Make sure 'gcloud compute' is installed and authenticated
 Setup a preconfigured cluster: (look in gce_cluster.py)  
 
     gce_cluster.py <project> <cluster-name>
-
-Setup cluster with # and type of slaves:
-
-    gce_cluster.py <project> <cluster-name> <no-slaves> <slave-type>
-
-Kill the cluster:
-
-    gce_cluster.py <project> <cluster-name> destroy
-
