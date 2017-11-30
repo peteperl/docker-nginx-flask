@@ -18,7 +18,6 @@ AWS does not allow you to build on the fly from the docker-compose.yml so we bui
 and push to our repo. This assumes you have setup the 'aws' and 'ecs-cli' clis and configured.  
 
 The 'aws' cli setup to use docker can be thorny. More comments to come.  
-...  
   
 Get your aws docker login:  
 
