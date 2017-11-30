@@ -30,7 +30,16 @@ Build Flask-gunicorn:
      sudo docker build --no-cache -t gunicorn-flask:a .
      sudo docker tag gunicorn-flask:a RepositoryURI:gunicorn-flask-a
      sudo docker push RepositoryURI:gunicorn-flask-a
+  
+Make sure you have installed and configured the 'ecs-cli'
 
+     ecs-cli configure profile --profile-name container-west-small --access-key XXXXXXXXX --secret-key XXXXXXXXXXXXXXXX
+     ecs-cli configure -r REGION -c CLUSTER
+
+cd to the 'docker-nginx-flask' directory:  
+
+     ecs-cli compose up
+  
 ## Todo
 
 I appreciate any comments.  
