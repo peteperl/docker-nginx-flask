@@ -17,6 +17,8 @@ Nginx handles the forwarding between each container.
 AWS does not allow you to build on the fly from the docker-compose.yml so we built each piece
 and push to our repo. This assumes you have setup the 'aws' and 'ecs-cli' clis and configured.
   
+cd into the directory of each component. Use a reasonable versioning. I used 'a' as an example.    
+  
 Build Nginx:  
 
      sudo docker build --no-cache -t nginx:a .
