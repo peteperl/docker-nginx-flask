@@ -17,13 +17,13 @@ Nginx handles the forwarding between each container.
 AWS does not allow you to build on the fly from the docker-compose.yml so we built each piece
 and push to our repo. This assumes you have setup the 'aws' and 'ecs-cli' clis and configured.
   
-* Build Nginx:  
+Build Nginx:  
 
      sudo docker build --no-cache -t nginx:a .
      sudo docker tag nginx:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
      sudo docker push 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
 
-* Build Flask-gunicorn:  
+Build Flask-gunicorn:  
 
      sudo docker build --no-cache -t gunicorn-flask:a .
      sudo docker tag gunicorn-flask:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:gunicorn-flask-a
