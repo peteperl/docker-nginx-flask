@@ -22,14 +22,14 @@ cd into the directory of each component. Use a reasonable versioning. I used 'a'
 Build Nginx: (I used nginx:alpine)  
 
      sudo docker build --no-cache -t nginx:a .
-     sudo docker tag nginx:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
-     sudo docker push 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
+     sudo docker tag nginx:a RepositoryURI:nginx-a
+     sudo docker push RepositoryURI:nginx-a
 
 Build Flask-gunicorn:  
 
      sudo docker build --no-cache -t gunicorn-flask:a .
-     sudo docker tag gunicorn-flask:a 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:gunicorn-flask-a
-     sudo docker push 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:gunicorn-flask-a
+     sudo docker tag gunicorn-flask:a RepositoryURI:gunicorn-flask-a
+     sudo docker push RepositoryURI:gunicorn-flask-a
 
 ## Todo
 
