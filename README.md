@@ -3,10 +3,10 @@ Dockerized Nginx Flask configuration in multiple containers
 
 ## Configuration
 
-Web -> [Nginx]  
-          |  
-          |->[gunicorn-Flask]  
-          |->[legacy API]  
+[Nginx]  
+ |  
+ |->[gunicorn-Flask]  
+ |->[legacy API]  
 
 * Breaking each component into it's own container allows for a true microservice architecture
 where each component can be updated independently (including nginx).
