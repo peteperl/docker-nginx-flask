@@ -11,6 +11,7 @@ Dockerized Nginx Flask configuration in multiple containers
 * Breaking each component into it's own container allows for a true microservice architecture
 where each component can be updated independently (including nginx).
 Nginx handles the forwarding between each container.
+* Name each container in the 'docker-compose.yml' file and in the nginx.conf file that does the forwarding of a route to that container.
 
 ## Setup
 
