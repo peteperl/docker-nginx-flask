@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  web:
+    restart: always
+    image: 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:gunicorn-flask-a
+    networks:
+      - mainnet
+    ports:
+      - "5000:5000"
+
+  nginx:
+    restart: always
+    image: 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-a
+    networks:
+      - mainnet
+    links:
+      - web
+    ports:
+      - "80:80"
+    expose:
+      - "80"
+    volumes:
+      - /www/static
+    volumes_from:
+      - web
+
+networks:
+  mainnet:

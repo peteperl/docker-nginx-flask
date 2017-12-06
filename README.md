@@ -24,7 +24,7 @@ Get your aws docker login:
 
      ~/.local/bin/aws ecr get-login
 
-Paste what the above command returns, removing the '-e none' (this has been depreciated and won't work if you leave it in).  
+Paste what the above command returns using 'sudo', removing the '-e none' (this has been depreciated and won't work if you leave it in).
   
 cd into the directory of each component. Use a reasonable versioning. I used 'a' as an example.    
   
