@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --region us-west-2)
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build --no-cache -t nginx:m nginx/
+      - docker tag nginx:m 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-m
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push 613145902265.dkr.ecr.us-west-2.amazonaws.com/container_west:nginx-m
