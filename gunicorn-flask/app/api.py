@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '[Nginx]-[gunicorn-Flask] Dockerized on ECS<br/><br/> Pretend this is our new API:<br/>  /hello<br/>  /echo/aword'
+    return '[Nginx]-[gunicorn-Flask] Dockerized on ECS<br/><br/> This image was Auto Built And Pushed to ECR<br/><br/> Pretend this is our new API:<br/>  /hello<br/>  /echo/aword'
 
 @app.route('/json')
 def hello_world():
